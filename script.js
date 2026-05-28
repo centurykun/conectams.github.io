@@ -135,11 +135,13 @@ function mostrarPopupSucesso() {
     overlay.querySelector('.popup-fechar').addEventListener('click', fecharPopupSucesso);
   }
 
-  // Exibe com animação
+  // Dois frames encadeados: o 1º deixa o browser pintar o estado inicial
+  // (visibility:hidden + opacity:0), o 2º adiciona a classe que dispara a transição.
   requestAnimationFrame(() => {
-    overlay.classList.add('popup-ativo');
-    // Fecha automaticamente após 6 segundos
-    setTimeout(fecharPopupSucesso, 6000);
+    requestAnimationFrame(() => {
+      overlay.classList.add('popup-ativo');
+      setTimeout(fecharPopupSucesso, 6000);
+    });
   });
 
   // Foca o botão de fechar para acessibilidade
