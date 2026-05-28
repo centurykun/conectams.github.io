@@ -60,8 +60,9 @@ elementosAnimados.forEach(el => observador.observe(el));
 
 
 // ---------- FORMULÁRIO DE CADASTRO ----------
-const form    = document.getElementById('form-cadastro');
-const sucesso = document.getElementById('form-sucesso');
+const form      = document.getElementById('form-cadastro');
+const sucesso   = document.getElementById('form-sucesso');
+const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -76,24 +77,81 @@ form.addEventListener('submit', async (event) => {
     return;
   }
 
-  const resposta = await fetch('https://formspree.io/f/meednlpb', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'          // ← isso era o que faltava
-    },
-    body: JSON.stringify({ nome, email, area, descricao })
-  });
+  // Estado de carregamento
+  submitBtn.disabled = true;
+  submitBtn.classList.add('btn-loading');
+  submitBtn.dataset.originalText = submitBtn.textContent;
+  submitBtn.innerHTML = '<span class="btn-spinner"></span> Enviando...';
 
-  if (resposta.ok) {
-    form.reset();
-    sucesso.classList.remove('hidden');
-    setTimeout(() => sucesso.classList.add('hidden'), 5000);
-  } else {
-    const data = await resposta.json();
-    alert('Erro ao enviar: ' + (data?.error || 'Tente novamente.'));
+  try {
+    const resposta = await fetch('https://formspree.io/f/meednlpb', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ nome, email, area, descricao })
+    });
+
+    if (resposta.ok) {
+      form.reset();
+      mostrarPopupSucesso();
+    } else {
+      alert('Erro ao enviar. Tente novamente.');
+    }
+  } catch (err) {
+    alert('Erro de conexão. Verifique sua internet e tente novamente.');
+  } finally {
+    // Restaura o botão independente do resultado
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('btn-loading');
+    submitBtn.textContent = submitBtn.dataset.originalText || 'Enviar cadastro';
   }
 });
+
+// ---------- POPUP DE SUCESSO ----------
+function mostrarPopupSucesso() {
+  // Cria o overlay do popup se ainda não existir
+  let overlay = document.getElementById('popup-sucesso-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'popup-sucesso-overlay';
+    overlay.innerHTML = `
+      <div class="popup-sucesso-box" role="dialog" aria-modal="true" aria-labelledby="popup-titulo">
+        <div class="popup-icone">✅</div>
+        <h3 id="popup-titulo">Cadastro enviado!</h3>
+        <p>Recebemos sua solicitação com sucesso.<br>Entraremos em contato em breve.</p>
+        <button class="btn-primary popup-fechar">Fechar</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Fecha ao clicar no fundo escuro
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) fecharPopupSucesso();
+    });
+
+    // Fecha ao clicar no botão
+    overlay.querySelector('.popup-fechar').addEventListener('click', fecharPopupSucesso);
+  }
+
+  // Exibe com animação
+  requestAnimationFrame(() => {
+    overlay.classList.add('popup-ativo');
+    // Fecha automaticamente após 6 segundos
+    setTimeout(fecharPopupSucesso, 6000);
+  });
+
+  // Foca o botão de fechar para acessibilidade
+  setTimeout(() => overlay.querySelector('.popup-fechar').focus(), 80);
+}
+
+function fecharPopupSucesso() {
+  const overlay = document.getElementById('popup-sucesso-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('popup-ativo');
+}
+
 // ---------- MODAIS DE PROJETO ----------
 
 /**

@@ -598,6 +598,96 @@ body {
   text-align: center;
 }
 
+/* ---------- BOTÃO: ESTADO DE CARREGAMENTO ---------- */
+.btn-loading {
+  opacity: 0.82;
+  cursor: not-allowed;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: girar 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- POPUP DE SUCESSO ---------- */
+#popup-sucesso-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background-color: rgba(15, 30, 20, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#popup-sucesso-overlay.popup-ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-sucesso-box {
+  background-color: var(--branco);
+  border-radius: 24px;
+  padding: 48px 40px 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#popup-sucesso-overlay.popup-ativo .popup-sucesso-box {
+  transform: translateY(0) scale(1);
+}
+
+.popup-icone {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.popup-sucesso-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--verde-escuro);
+  margin-bottom: 12px;
+}
+
+.popup-sucesso-box p {
+  color: var(--texto-mudo);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.popup-fechar {
+  min-width: 140px;
+  border-radius: 100px;
+  padding: 13px 32px;
+  font-size: 0.95rem;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background-color: #111c15;
