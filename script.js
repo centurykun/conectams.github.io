@@ -60,8 +60,9 @@ elementosAnimados.forEach(el => observador.observe(el));
 
 
 // ---------- FORMULÁRIO DE CADASTRO ----------
-const form      = document.getElementById('form-cadastro');
-const sucesso   = document.getElementById('form-sucesso');
+const form    = document.getElementById('form-cadastro');
+const sucesso = document.getElementById('form-sucesso');
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -77,7 +78,10 @@ form.addEventListener('submit', async (event) => {
 
   const resposta = await fetch('https://formspree.io/f/meednlpb', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'          // ← isso era o que faltava
+    },
     body: JSON.stringify({ nome, email, area, descricao })
   });
 
@@ -86,10 +90,10 @@ form.addEventListener('submit', async (event) => {
     sucesso.classList.remove('hidden');
     setTimeout(() => sucesso.classList.add('hidden'), 5000);
   } else {
-    alert('Erro ao enviar. Tente novamente.');
+    const data = await resposta.json();
+    alert('Erro ao enviar: ' + (data?.error || 'Tente novamente.'));
   }
 });
-
 // ---------- MODAIS DE PROJETO ----------
 
 /**
