@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConectaMS – Plataforma do Terceiro Setor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVEGAÇÃO ========== -->
+  <header id="header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">Conecta<span>MS</span></a>
+      <ul class="nav-links">
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#cadastro" class="nav-cta">Cadastre-se</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Coluna esquerda: texto -->
+        <div class="hero-content">
+          <span class="badge">📍 Campo Grande, MS</span>
+          <h1>Conectando quem quer <em>ajudar</em> a quem precisa de apoio</h1>
+          <p class="hero-desc">
+            Uma plataforma gratuita para descobrir, apoiar e divulgar projetos sociais
+            de Campo Grande e região. Tecnologia a serviço da comunidade.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn-primary">Ver projetos</a>
+            <a href="#cadastro" class="btn-outline">Cadastrar organização</a>
+          </div>
+        </div>
+
+        <!-- Coluna direita: fotos -->
+        <div class="hero-media">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo-main"
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=620&h=560&q=82"
+              alt="Voluntários e beneficiários reunidos em projeto comunitário"
+              loading="eager"
+            >
+          </div>
+          <img
+            class="hero-photo-mini"
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=270&h=190&q=80"
+            alt="Crianças em atividade de aprendizagem"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+
+  <!-- ========== COMO FUNCIONA ========== -->
+  <section id="como-funciona">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <p class="section-subtitle">Simples, rápido e sem burocracia</p>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-icon">🔍</div>
+          <span class="step-number">01</span>
+          <h3>Descubra</h3>
+          <p>Explore projetos e organizações sociais ativas em Campo Grande e encontre causas que fazem sentido pra você.</p>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step">
+          <div class="step-icon">🤝</div>
+          <span class="step-number">02</span>
+          <h3>Conecte-se</h3>
+          <p>Entre em contato diretamente com ONGs e associações para oferecer voluntariado, doações ou parcerias.</p>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step">
+          <div class="step-icon">🌱</div>
+          <span class="step-number">03</span>
+          <h3>Transforme</h3>
+          <p>Acompanhe o impacto das ações e veja a mudança acontecendo na sua cidade.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAIXA DE IMPACTO VISUAL ========== -->
+  <div class="impact-strip" role="img" aria-label="Momentos de impacto social em Campo Grande">
+    <figure class="impact-photo">
+      <img
+        src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=520&h=290&q=75"
+        alt="Pessoas em ação voluntária na comunidade"
+        loading="lazy"
+      >
+    </figure>
+    <figure class="impact-photo">
+      <img
+        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=390&h=290&q=75"
+        alt="Ação de educação ambiental comunitária"
+        loading="lazy"
+      >
+    </figure>
+    <figure class="impact-photo">
+      <img
+        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=520&h=290&q=75"
+        alt="Famílias sendo atendidas por projeto social"
+        loading="lazy"
+      >
+    </figure>
+  </div>
+
+  <!-- ========== PROJETOS EM DESTAQUE ========== -->
+  <section id="projetos">
+    <div class="container">
+      <h2>Projetos em destaque</h2>
+      <p class="section-subtitle">Organizações que atuam em Campo Grande, MS</p>
+
+      <div class="cards">
+
+        <!-- AACC/MS -->
+        <article class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=210&q=80"
+            alt="Casa de Apoio da AACC/MS – atendimento integral a crianças com câncer"
+            loading="lazy"
+          >
+          <span class="tag tag-sau">Saúde</span>
+          <h3>AACC/MS</h3>
+          <p>Assistência integral a crianças e adolescentes com câncer de 0 a 19 anos em todo o MS, com hospedagem, alimentação e suporte psicossocial.</p>
+          <div class="card-footer">
+            <span class="card-local">📍 Av. Ernesto Geisel</span>
+            <button class="card-link modal-trigger" data-modal="modal-aacc">Saiba mais →</button>
+          </div>
+        </article>
+
+        <!-- Cotolengo Sul-Mato-Grossense -->
+        <article class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&h=210&q=80"
+            alt="Atendimento especializado em reabilitação no Cotolengo Sul-Mato-Grossense"
+            loading="lazy"
+          >
+          <span class="tag tag-rea">Reabilitação</span>
+          <h3>Cotolengo Sul-Mato-Grossense</h3>
+          <p>Atendimento multidisciplinar a pessoas com paralisia cerebral grave e deficiências neurológicas, com mais de 3 mil atendimentos por mês.</p>
+          <div class="card-footer">
+            <span class="card-local">📍 Bairro Mata do Jacinto</span>
+            <button class="card-link modal-trigger" data-modal="modal-cotolengo">Saiba mais →</button>
+          </div>
+        </article>
+
+        <!-- ISMAC -->
+        <article class="card">
+          <img
+            class="card-img"
+            src="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?auto=format&fit=crop&w=600&h=210&q=80"
+            alt="Reabilitação e educação em Braille para pessoas com deficiência visual no ISMAC"
+            loading="lazy"
+          >
+          <span class="tag tag-edu">Educação · Inclusão</span>
+          <h3>ISMAC</h3>
+          <p>Referência em reabilitação, educação em Braille, capacitação profissional e inclusão social de cegos e pessoas com baixa visão desde 1957.</p>
+          <div class="card-footer">
+            <span class="card-local">📍 Jardim dos Estados</span>
+            <button class="card-link modal-trigger" data-modal="modal-ismac">Saiba mais →</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FORMULÁRIO DE CADASTRO ========== -->
+  <section id="cadastro">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-info">
+          <h2>Cadastre sua organização</h2>
+          <p>Sua ONG ou associação pode ser encontrada por quem quer ajudar. O cadastro é gratuito e leva menos de 2 minutos.</p>
+          <ul class="form-benefits">
+            <li>✅ Visibilidade para sua causa</li>
+            <li>✅ Conexão com voluntários</li>
+            <li>✅ Sem custo algum</li>
+          </ul>
+        </div>
+
+        <form id="form-cadastro" class="form">
+          <div class="form-group">
+            <label for="nome">Nome da organização</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Instituto Esperança" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail de contato</label>
+            <input type="email" id="email" name="email" placeholder="contato@organizacao.org.br" required>
+          </div>
+
+          <div class="form-group">
+            <label for="area">Área de atuação</label>
+            <select id="area" name="area" required>
+              <option value="">Selecione uma área</option>
+              <option value="educacao">Educação</option>
+              <option value="saude">Saúde</option>
+              <option value="assistencia">Assistência Social</option>
+              <option value="meio-ambiente">Meio Ambiente</option>
+              <option value="cultura">Cultura e Esporte</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="descricao">Descrição do projeto</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva brevemente o trabalho da sua organização..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Enviar cadastro</button>
+
+          <div id="form-sucesso" class="form-sucesso hidden">
+            🎉 Cadastro enviado com sucesso! Entraremos em contato em breve.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container footer-content">
+      <p class="logo-footer">Conecta<span>MS</span></p>
+      <p class="footer-desc">
+        Plataforma desenvolvida como Atividade Extensionista – UNINTER<br>
+        Campo Grande, MS · 2026 · Uso não comercial
+      </p>
+      <p class="footer-links">
+        <a href="#como-funciona">Como funciona</a> ·
+        <a href="#projetos">Projetos</a> ·
+        <a href="#cadastro">Cadastro</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== MODAL – AACC/MS ========== -->
+  <div class="modal-overlay" id="modal-aacc" role="dialog" aria-modal="true" aria-labelledby="modal-aacc-title">
+    <div class="modal-box">
+      <button class="modal-close" data-close="modal-aacc" aria-label="Fechar">&#x2715;</button>
+      <div class="modal-img-wrap">
+        <img
+          class="modal-img"
+          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=680&h=300&q=85"
+          alt="Casa de Apoio da AACC/MS – suporte integral a pacientes"
+          loading="lazy"
+        >
+        <div class="modal-img-overlay"></div>
+        <div class="modal-tag-wrap"><span class="tag tag-sau">Saúde</span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span>📍 Av. Ernesto Geisel · Campo Grande, MS</span>
+          <span>🗓 Fundada em 29/03/1998</span>
+        </div>
+        <h2 class="modal-title" id="modal-aacc-title">AACC/MS</h2>
+        <p class="modal-full-name">Associação dos Amigos das Crianças com Câncer</p>
+        <p class="modal-desc">
+          Há mais de 28 anos a AACC/MS cuida de crianças e adolescentes com câncer de 0 a 19 anos
+          em todo o Mato Grosso do Sul — e até de países vizinhos como Paraguai, Bolívia e Venezuela.
+          Atende mais de 600 crianças, funcionando como Casa de Apoio com capacidade para 52 assistidos.
+          A missão vai além da saúde física: oferece suporte completo para que cada família encontre
+          acolhimento durante o tratamento, com o famoso <strong>Sino da Vitória</strong> celebrando cada alta.
+        </p>
+        <div class="modal-services">
+          <h4>O que oferecem</h4>
+          <ul>
+            <li>🏠 Hospedagem na Casa de Apoio</li>
+            <li>🍽️ 5 refeições diárias</li>
+            <li>🚌 Transporte para exames</li>
+            <li>🧠 Suporte psicossocial</li>
+            <li>👩‍⚕️ Enfermagem e nutrição</li>
+            <li>🎨 Atividades lúdico-pedagógicas</li>
+          </ul>
+        </div>
+        <div class="modal-contact">
+          <a href="tel:+556733254001">📞 (67) 3325-4001 / 3325-4000</a>
+          <a href="mailto:aacc@aacc-ms.org.br">✉️ aacc@aacc-ms.org.br</a>
+          <a href="https://aacc-ms.org.br" target="_blank" rel="noopener">🌐 aacc-ms.org.br</a>
+        </div>
+        <a href="https://aacc-ms.org.br" target="_blank" rel="noopener" class="btn-primary modal-btn">
+          Conhecer e apoiar →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL – COTOLENGO ========== -->
+  <div class="modal-overlay" id="modal-cotolengo" role="dialog" aria-modal="true" aria-labelledby="modal-cotolengo-title">
+    <div class="modal-box">
+      <button class="modal-close" data-close="modal-cotolengo" aria-label="Fechar">&#x2715;</button>
+      <div class="modal-img-wrap">
+        <img
+          class="modal-img"
+          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=680&h=300&q=85"
+          alt="Atendimento de reabilitação no Cotolengo Sul-Mato-Grossense"
+          loading="lazy"
+        >
+        <div class="modal-img-overlay"></div>
+        <div class="modal-tag-wrap"><span class="tag tag-rea">Reabilitação</span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span>📍 R. Jamil Basmage, 996 · Mata do Jacinto</span>
+          <span>🗓 Fundado em 20/07/1996</span>
+        </div>
+        <h2 class="modal-title" id="modal-cotolengo-title">Cotolengo Sul-Mato-Grossense</h2>
+        <p class="modal-full-name">Pequena Obra da Divina Providência</p>
+        <p class="modal-desc">
+          Com mais de 29 anos de atuação, o Cotolengo atende crianças, adolescentes e adultos
+          com paralisia cerebral grave e outras deficiências neurológicas vindos de famílias carentes.
+          São aproximadamente <strong>650 pessoas atendidas mensalmente</strong> no Centro Especializado
+          de Reabilitação (CER), no Centro Dia e na Residência Inclusiva — que acolhe 11 jovens e adultos
+          em situação de dependência. A instituição conta com 82 colaboradores e cerca de 120 voluntários.
+        </p>
+        <div class="modal-services">
+          <h4>Serviços oferecidos</h4>
+          <ul>
+            <li>🦽 Fisioterapia</li>
+            <li>🗣️ Fonoaudiologia</li>
+            <li>🖐️ Terapia Ocupacional</li>
+            <li>🧠 Psicologia</li>
+            <li>📚 Pedagogia</li>
+            <li>🏥 Enfermagem</li>
+            <li>🍽️ Nutrição enteral</li>
+            <li>🏠 Residência Inclusiva</li>
+          </ul>
+        </div>
+        <div class="modal-contact">
+          <a href="tel:+556733584848">📞 (67) 3358-4848</a>
+          <a href="https://cotolengo.com.br" target="_blank" rel="noopener">🌐 cotolengo.com.br</a>
+        </div>
+        <a href="https://cotolengo.com.br" target="_blank" rel="noopener" class="btn-primary modal-btn">
+          Conhecer e apoiar →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL – ISMAC ========== -->
+  <div class="modal-overlay" id="modal-ismac" role="dialog" aria-modal="true" aria-labelledby="modal-ismac-title">
+    <div class="modal-box">
+      <button class="modal-close" data-close="modal-ismac" aria-label="Fechar">&#x2715;</button>
+      <div class="modal-img-wrap">
+        <img
+          class="modal-img"
+          src="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?auto=format&fit=crop&w=680&h=300&q=85"
+          alt="Educação e reabilitação para pessoas com deficiência visual no ISMAC"
+          loading="lazy"
+        >
+        <div class="modal-img-overlay"></div>
+        <div class="modal-tag-wrap"><span class="tag tag-edu">Educação · Inclusão</span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span>📍 R. 25 de Dezembro, 262 · Jardim dos Estados</span>
+          <span>🗓 Fundado em 04/02/1957</span>
+        </div>
+        <h2 class="modal-title" id="modal-ismac-title">ISMAC</h2>
+        <p class="modal-full-name">Instituto Sul-Mato-Grossense para Cegos "Florivaldo Vargas"</p>
+        <p class="modal-desc">
+          Com 69 anos de história, o ISMAC é a principal referência estadual em reabilitação,
+          educação e inclusão social de pessoas com deficiência visual — cegos e com baixa visão.
+          Fundado pelo Sr. Florivaldo Vargas, que percebeu que os cegos de Campo Grande sobreviviam
+          de mendicância, o instituto nasceu sob o lema <strong>"Assistência, Trabalho e Educação"</strong>.
+          Hoje conta com o Centro de Referência em Reabilitação Visual de MS, escola de EJA e equipe
+          paralímpica de goalball que disputa campeonatos nacionais.
+        </p>
+        <div class="modal-services">
+          <h4>Serviços oferecidos</h4>
+          <ul>
+            <li>👁️ Reabilitação visual (CRRV/MS)</li>
+            <li>📖 Alfabetização em Braille</li>
+            <li>🎓 EJA – Escola Nazaret Mendes</li>
+            <li>💼 Capacitação profissional</li>
+            <li>🧠 Suporte psicossocial</li>
+            <li>🏅 Esporte paralímpico (goalball)</li>
+            <li>📋 Apoio pedagógico (CAEE)</li>
+          </ul>
+        </div>
+        <div class="modal-contact">
+          <a href="tel:+556733250997">📞 (67) 3325-0997</a>
+          <a href="https://ismac.org.br" target="_blank" rel="noopener">🌐 ismac.org.br</a>
+        </div>
+        <a href="https://ismac.org.br" target="_blank" rel="noopener" class="btn-primary modal-btn">
+          Conhecer e apoiar →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
